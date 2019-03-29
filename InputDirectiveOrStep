@@ -1,6 +1,15 @@
 #Jenkinsfile (Declarative Pipeline)
 #https://jenkins.io/blog/2018/04/09/whats-in-declarative/
-
+# Jenkins directives added input in above date, which means we can use input in the stage block
+# Key Values will be constructed by name value 
+# message: "Should we continue?"
+# message "Should we continue?"
+# All arrays, in a block will be constructed by braces {}
+# step: parameters: [string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')]
+# block: parameters {
+    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+}
 pipeline {
     agent any
     stages {
